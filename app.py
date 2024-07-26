@@ -43,58 +43,74 @@ def preprocess_input(user_input):
     processed_input[numeric_features] = scaler.transform(processed_input[numeric_features])
     return processed_input
 
-# CSS untuk styling pastel
+# CSS untuk gaya dengan warna baby pink dan biru tua
 st.markdown("""
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
     .main {
-        background-color: #F5F5F5; /* Abu-abu pastel */
-        color: #4A4A4A; /* Abu-abu gelap untuk teks */
+        background-color: #FDF2F8; /* Baby Pink */
+        font-family: 'Baloo 2', cursive;
     }
     h1 {
-        color: #FFB6C1; /* Pink pastel */
+        color: #003366; /* Dark Blue */
         text-align: center;
-        font-family: 'Arial', sans-serif;
+        margin-bottom: 25px;
+        font-family: 'Baloo 2', cursive;
     }
     h3 {
-        color: #B0E57C; /* Hijau pastel */
-        font-family: 'Arial', sans-serif;
+        color: #003366; /* Dark Blue */
+        font-family: 'Baloo 2', cursive;
     }
     .stButton>button {
-        background-color: #A2C2E8; /* Biru pastel */
-        color: black;
+        background-color: #003366; /* Dark Blue */
+        color: white;
         padding: 10px 24px;
         border: none;
-        border-radius: 12px;
+        border-radius: 4px;
         cursor: pointer;
-        font-family: 'Arial', sans-serif;
+        font-family: 'Baloo 2', cursive;
     }
     .stButton>button:hover {
-        background-color: #7DA0D0; /* Biru pastel gelap */
+        background-color: #001a33; /* Darker Blue */
     }
     .stNumberInput, .stSelectbox {
         margin-bottom: 20px;
+    }
+    .css-1offfwp {
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: white;
     }
     </style>
 """, unsafe_allow_html=True)
 
 # Antarmuka Streamlit
+st.image("https://via.placeholder.com/800x200.png?text=Prediksi+Feedback+Pelanggan+Online+Food", use_column_width=True)
 st.title("Prediksi Feedback Pelanggan Online Food")
 
 st.markdown("""
     <h3>Masukkan Data Pelanggan</h3>
 """, unsafe_allow_html=True)
 
-# Input pengguna
-age = st.number_input('Age', min_value=18, max_value=100)
-gender = st.selectbox('Gender', ['Male', 'Female'])
-marital_status = st.selectbox('Marital Status', ['Single', 'Married'])
-occupation = st.selectbox('Occupation', ['Student', 'Employee', 'Self Employed'])
-monthly_income = st.selectbox('Monthly Income', ['No Income', 'Below Rs.10000', '10001 to 25000', '25001 to 50000', 'More than 50000'])
-educational_qualifications = st.selectbox('Educational Qualifications', ['Under Graduate', 'Graduate', 'Post Graduate'])
-family_size = st.number_input('Family size', min_value=1, max_value=20)
-latitude = st.number_input('Latitude', format="%f")
-longitude = st.number_input('Longitude', format="%f")
-pin_code = st.number_input('Pin code', min_value=100000, max_value=999999)
+# Membagi tampilan menjadi dua kolom
+col1, col2 = st.columns(2)
+
+# Input pengguna di kolom kiri
+with col1:
+    age = st.number_input('Age', min_value=18, max_value=100)
+    gender = st.selectbox('Gender', ['Male', 'Female'])
+    marital_status = st.selectbox('Marital Status', ['Single', 'Married'])
+    occupation = st.selectbox('Occupation', ['Student', 'Employee', 'Self Employed'])
+    monthly_income = st.selectbox('Monthly Income', ['No Income', 'Below Rs.10000', '10001 to 25000', '25001 to 50000', 'More than 50000'])
+
+# Input pengguna di kolom kanan
+with col2:
+    educational_qualifications = st.selectbox('Educational Qualifications', ['Under Graduate', 'Graduate', 'Post Graduate'])
+    family_size = st.number_input('Family size', min_value=1, max_value=20)
+    latitude = st.number_input('Latitude', format="%f")
+    longitude = st.number_input('Longitude', format="%f")
+    pin_code = st.number_input('Pin code', min_value=100000, max_value=999999)
 
 user_input = {
     'Age': age,
