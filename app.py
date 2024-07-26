@@ -46,30 +46,32 @@ def preprocess_input(user_input):
 # CSS untuk gaya
 st.markdown("""
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
     .main {
         background-color: #f0f2f6;
+        font-family: 'Baloo 2', cursive;
     }
     h1 {
-        color: #333333;
+        color: #ff6f61;
         text-align: center;
         margin-bottom: 25px;
-        font-family: 'Arial', sans-serif;
+        font-family: 'Baloo 2', cursive;
     }
     h3 {
-        color: #333333;
-        font-family: 'Arial', sans-serif;
+        color: #ff6f61;
+        font-family: 'Baloo 2', cursive;
     }
     .stButton>button {
-        background-color: #4CAF50;
+        background-color: #ff6f61;
         color: white;
         padding: 10px 24px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        font-family: 'Arial', sans-serif;
+        font-family: 'Baloo 2', cursive;
     }
     .stButton>button:hover {
-        background-color: #45a049;
+        background-color: #e64a43;
     }
     .stNumberInput, .stSelectbox {
         margin-bottom: 20px;
