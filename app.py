@@ -119,18 +119,14 @@ with col1:
 
 # Input pengguna di kolom kanan
 with col2:
-    st.markdown('<p style="color: #003366; font-size: 16px; font-family: \'Baloo 2\', cursive;">Educational Qualifications</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: #003366; font-size: 8px; font-family: \'Baloo 2\', cursive;">Educational Qualifications</p>', unsafe_allow_html=True)
     educational_qualifications = st.selectbox('', ['Under Graduate', 'Graduate', 'Post Graduate'])
-    
     st.markdown('<p style="color: #003366; font-size: 16px; font-family: \'Baloo 2\', cursive;">Family size</p>', unsafe_allow_html=True)
     family_size = st.number_input('', min_value=1, max_value=20)
-    
     st.markdown('<p style="color: #003366; font-size: 16px; font-family: \'Baloo 2\', cursive;">Latitude</p>', unsafe_allow_html=True)
     latitude = st.number_input('', format="%f")
-    
     st.markdown('<p style="color: #003366; font-size: 16px; font-family: \'Baloo 2\', cursive;">Longitude</p>', unsafe_allow_html=True)
     longitude = st.number_input('', format="%f")
-    
     st.markdown('<p style="color: #003366; font-size: 16px; font-family: \'Baloo 2\', cursive;">Pin code</p>', unsafe_allow_html=True)
     pin_code = st.number_input('', min_value=100000, max_value=999999)
 
