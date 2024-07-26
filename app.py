@@ -53,6 +53,7 @@ st.markdown("""
     h1, h3, label, .stSelectbox label, .stNumberInput label, .stTextInput label {
         color: #003366; /* Dark Blue */
         font-family: 'Baloo 2', cursive;
+        text-align: center; /* Memusatkan teks */
     }
     .stButton>button {
         background-color: #FFC1CC; /* Light Pink */
@@ -79,7 +80,7 @@ st.markdown("""
 # Antarmuka Streamlit
 st.title("Prediksi Feedback Pelanggan Online Food")
 
-st.markdown("<h3>Masukkan Data Pelanggan</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Masukkan Data Pelanggan</h3>", unsafe_allow_html=True)
 
 # Membagi input form menjadi dua kolom
 col1, col2 = st.columns(2)
@@ -123,6 +124,6 @@ if st.button('Predict'):
 
 # Tambahkan elemen HTML untuk output
 st.markdown("""
-    <h3>Output Prediksi</h3>
-    <p>Hasil prediksi akan ditampilkan di sini.</p>
+    <h3 style='text-align: center;'>Output Prediksi</h3>
+    <p style='text-align: center;'>Hasil prediksi akan ditampilkan di sini.</p>
 """, unsafe_allow_html=True)
