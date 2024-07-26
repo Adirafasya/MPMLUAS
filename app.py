@@ -118,7 +118,11 @@ if st.button('Predict'):
     user_input_processed = preprocess_input(user_input)
     try:
         prediction = model.predict(user_input_processed)
-        st.write(f'Prediction: {prediction[0]}')
+        # Pemetaan hasil model ke "Yes" atau "No"
+        if prediction[0] == 1:
+            st.write('Prediction: Yes')
+        else:
+            st.write('Prediction: No')
     except ValueError as e:
         st.error(f"Error in prediction: {e}")
 
