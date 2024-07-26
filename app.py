@@ -127,14 +127,13 @@ if st.button('Predict'):
     user_input_processed = preprocess_input(user_input)
     try:
         prediction = model.predict(user_input_processed)
-        # Pemetaan hasil model ke "Yes" atau "No"
+        # Pemetaan hasil model ke "Pelanggan terdaftar" atau "Pelanggan tidak terdaftar"
         result = 'Pelanggan terdaftar' if prediction[0] == 1 else 'Pelanggan tidak terdaftar'
         st.markdown(f"<h3 class='prediction-output'>Prediction: {result}</h3>", unsafe_allow_html=True)
     except ValueError as e:
         st.error(f"Error in prediction: {e}")
 
-# Tambahkan elemen HTML untuk output
+# Menghapus bagian "Output Prediksi" dan menampilkan pesan dengan warna biru
 st.markdown("""
-    <h3 style='text-align: center;'>Output Prediksi</h3>
     <p class='info-text'>Hasil prediksi akan ditampilkan di sini.</p>
 """, unsafe_allow_html=True)
