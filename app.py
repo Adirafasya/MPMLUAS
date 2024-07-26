@@ -43,29 +43,40 @@ def preprocess_input(user_input):
     processed_input[numeric_features] = scaler.transform(processed_input[numeric_features])
     return processed_input
 
-# CSS for styling
+# CSS untuk gaya dengan warna baby pink dan teks biru
 st.markdown("""
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
     .main {
         background-color: #FDF2F8; /* Baby Pink */
+        font-family: 'Baloo 2', cursive;
     }
     h1, h3, p, label {
-        color: #003366; /* Blue */
+        color: #003366; /* Dark Blue */
     }
     .stButton>button {
         background-color: #003366; /* Dark Blue */
-        color: #FDF2F8 !important; /* Baby Pink */
+        color: white;
         padding: 10px 24px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        font-weight: bold;
     }
     .stButton>button:hover {
         background-color: #001a33; /* Darker Blue */
     }
     .stNumberInput, .stSelectbox {
-        margin-bottom: 20px;
+        margin-bottom: 10px; /* Mengurangi jarak antar elemen */
+    }
+    .css-1offfwp {
+        padding: 10px; /* Mengurangi padding dalam kolom */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: white;
+    }
+    .stSelectbox, .stNumberInput {
+        padding: 6px 12px; /* Mengurangi padding di dalam input box */
+        font-size: 14px; /* Ukuran teks lebih besar */
     }
     </style>
 """, unsafe_allow_html=True)
@@ -74,11 +85,6 @@ st.markdown("""
 st.title("Prediksi Feedback Pelanggan Online Food")
 
 st.markdown("""
-    <style>
-    .main {
-        background-color: #FDF2F8;
-    }
-    </style>
     <h3>Masukkan Data Pelanggan</h3>
 """, unsafe_allow_html=True)
 
