@@ -79,6 +79,7 @@ st.markdown("""
     .stNumberInput label, .stSelectbox label {
         color: #003366; /* Dark Blue */
         font-family: 'Baloo 2', cursive;
+        font-size: 16px;
     }
     .css-1offfwp {
         padding: 2rem;
@@ -102,36 +103,36 @@ col1, col2 = st.columns(2)
 
 # Input pengguna di kolom kiri
 with col1:
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Age</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Age</h4>', unsafe_allow_html=True)
     age = st.number_input('', min_value=18, max_value=100)
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Gender</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Gender</h4>', unsafe_allow_html=True)
     gender = st.selectbox('', ['Male', 'Female'])
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Marital Status</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Marital Status</h4>', unsafe_allow_html=True)
     marital_status = st.selectbox('', ['Single', 'Married'])
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Occupation</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Occupation</h4>', unsafe_allow_html=True)
     occupation = st.selectbox('', ['Student', 'Employee', 'Self Employed'])
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Monthly Income</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Monthly Income</h4>', unsafe_allow_html=True)
     monthly_income = st.selectbox('', ['No Income', 'Below Rs.10000', '10001 to 25000', '25001 to 50000', 'More than 50000'])
 
 # Input pengguna di kolom kanan
 with col2:
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Educational Qualifications</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Educational Qualifications</h4>', unsafe_allow_html=True)
     educational_qualifications = st.selectbox('', ['Under Graduate', 'Graduate', 'Post Graduate'])
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Family size</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Family size</h4>', unsafe_allow_html=True)
     family_size = st.number_input('', min_value=1, max_value=20)
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Latitude</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Latitude</h4>', unsafe_allow_html=True)
     latitude = st.number_input('', format="%f")
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Longitude</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Longitude</h4>', unsafe_allow_html=True)
     longitude = st.number_input('', format="%f")
     
-    st.markdown('<p style="color: #003366; font-family: \'Baloo 2\', cursive;">Pin code</p>', unsafe_allow_html=True)
+    st.markdown('<h4 style="color: #003366;">Pin code</h4>', unsafe_allow_html=True)
     pin_code = st.number_input('', min_value=100000, max_value=999999)
 
 user_input = {
