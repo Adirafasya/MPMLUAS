@@ -74,6 +74,11 @@ st.markdown("""
         padding: 6px 12px; /* Mengurangi padding di dalam input box */
         font-size: 14px; /* Ukuran teks lebih besar */
     }
+    .prediction-output {
+        color: #003366; /* Dark Blue */
+        font-size: 18px; /* Ukuran teks lebih besar */
+        text-align: center; /* Memusatkan teks */
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -119,10 +124,8 @@ if st.button('Predict'):
     try:
         prediction = model.predict(user_input_processed)
         # Pemetaan hasil model ke "Yes" atau "No"
-        if prediction[0] == 1:
-            st.write('Prediction: Yes')
-        else:
-            st.write('Prediction: No')
+        result = 'Yes' if prediction[0] == 1 else 'No'
+        st.markdown(f"<h3 class='prediction-output'>Prediction: {result}</h3>", unsafe_allow_html=True)
     except ValueError as e:
         st.error(f"Error in prediction: {e}")
 
