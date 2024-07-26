@@ -87,7 +87,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Antarmuka Streamlit
-st.title("Prediksi Feedback Pelanggan Online Food")
+st.title("Prediksi Pelanggan Online Food")
 
 st.markdown("<h3 style='text-align: center;'>Masukkan Data Pelanggan</h3>", unsafe_allow_html=True)
 
