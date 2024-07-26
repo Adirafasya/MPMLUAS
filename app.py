@@ -75,6 +75,11 @@ st.markdown("""
     }
     .stNumberInput, .stSelectbox {
         margin-bottom: 20px;
+        color: #003366; /* Dark Blue */
+        border-color: #003366; /* Dark Blue */
+    }
+    .stNumberInput input, .stSelectbox select {
+        color: #003366; /* Dark Blue */
     }
     .css-1offfwp {
         padding: 2rem;
