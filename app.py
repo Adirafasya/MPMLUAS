@@ -96,17 +96,24 @@ st.markdown("""
     <h3>Masukkan Data Pelanggan</h3>
 """, unsafe_allow_html=True)
 
-# Input pengguna
-age = st.number_input('Age', min_value=18, max_value=100)
-gender = st.selectbox('Gender', ['Male', 'Female'])
-marital_status = st.selectbox('Marital Status', ['Single', 'Married'])
-occupation = st.selectbox('Occupation', ['Student', 'Employee', 'Self Employed'])
-monthly_income = st.selectbox('Monthly Income', ['No Income', 'Below Rs.10000', '10001 to 25000', '25001 to 50000', 'More than 50000'])
-educational_qualifications = st.selectbox('Educational Qualifications', ['Under Graduate', 'Graduate', 'Post Graduate'])
-family_size = st.number_input('Family size', min_value=1, max_value=20)
-latitude = st.number_input('Latitude', format="%f")
-longitude = st.number_input('Longitude', format="%f")
-pin_code = st.number_input('Pin code', min_value=100000, max_value=999999)
+# Membagi tampilan menjadi dua kolom
+col1, col2 = st.columns(2)
+
+# Input pengguna di kolom kiri
+with col1:
+    age = st.number_input('Age', min_value=18, max_value=100)
+    gender = st.selectbox('Gender', ['Male', 'Female'])
+    marital_status = st.selectbox('Marital Status', ['Single', 'Married'])
+    occupation = st.selectbox('Occupation', ['Student', 'Employee', 'Self Employed'])
+    monthly_income = st.selectbox('Monthly Income', ['No Income', 'Below Rs.10000', '10001 to 25000', '25001 to 50000', 'More than 50000'])
+
+# Input pengguna di kolom kanan
+with col2:
+    educational_qualifications = st.selectbox('Educational Qualifications', ['Under Graduate', 'Graduate', 'Post Graduate'])
+    family_size = st.number_input('Family size', min_value=1, max_value=20)
+    latitude = st.number_input('Latitude', format="%f")
+    longitude = st.number_input('Longitude', format="%f")
+    pin_code = st.number_input('Pin code', min_value=100000, max_value=999999)
 
 user_input = {
     'Age': age,
