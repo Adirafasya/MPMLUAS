@@ -42,44 +42,55 @@ def preprocess_input(user_input):
     processed_input = pd.DataFrame(processed_input)
     processed_input[numeric_features] = scaler.transform(processed_input[numeric_features])
     return processed_input
-# CSS for styling
+
+# CSS untuk gaya
 st.markdown("""
     <style>
     .main {
-        background-color: #87CEEB;
+        background-color: #f0f2f6;
     }
     h1 {
-        color: #4b4b4b;
+        color: #333333;
         text-align: center;
         margin-bottom: 25px;
+        font-family: 'Arial', sans-serif;
     }
     h3 {
-        color: #4b4b4b;
+        color: #333333;
+        font-family: 'Arial', sans-serif;
     }
     .stButton>button {
-        background-color: #4b4b4b;
-        color: black;
+        background-color: #4CAF50;
+        color: white;
         padding: 10px 24px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        font-family: 'Arial', sans-serif;
     }
     .stButton>button:hover {
-        background-color: #4b4b4b;
+        background-color: #45a049;
     }
     .stNumberInput, .stSelectbox {
         margin-bottom: 20px;
+    }
+    .css-1offfwp {
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: white;
     }
     </style>
 """, unsafe_allow_html=True)
 
 # Antarmuka Streamlit
+st.image("https://via.placeholder.com/800x200.png?text=Prediksi+Feedback+Pelanggan+Online+Food", use_column_width=True)
 st.title("Prediksi Feedback Pelanggan Online Food")
 
 st.markdown("""
     <style>
     .main {
-        background-color: #87CEEB;
+        background-color: #f0f2f6;
     }
     </style>
     <h3>Masukkan Data Pelanggan</h3>
