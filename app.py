@@ -49,12 +49,12 @@ st.markdown("""
     .main {
         background-color: #FDF2F8; /* Baby Pink */
     }
-    h1, h3, p, .stButton>button {
+    h1, h3, p {
         color: #003366; /* Blue */
     }
     .stButton>button {
         background-color: #003366; /* Dark Blue */
-        color: white;
+        color: #FDF2F8; /* Baby Pink */
         padding: 10px 24px;
         border: none;
         border-radius: 4px;
