@@ -43,33 +43,33 @@ def preprocess_input(user_input):
     processed_input[numeric_features] = scaler.transform(processed_input[numeric_features])
     return processed_input
 
-# CSS untuk styling
+# CSS untuk styling pastel
 st.markdown("""
     <style>
     .main {
-        background-color: #FFEB3B; /* Kuning cerah */
-        color: #4A148C; /* Ungu gelap */
+        background-color: #F5F5F5; /* Abu-abu pastel */
+        color: #4A4A4A; /* Abu-abu gelap untuk teks */
     }
     h1 {
-        color: #FF5722; /* Oranye */
+        color: #FFB6C1; /* Pink pastel */
         text-align: center;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-family: 'Arial', sans-serif;
     }
     h3 {
-        color: #4CAF50; /* Hijau */
-        font-family: 'Comic Sans MS', cursive, sans-serif;
+        color: #B0E57C; /* Hijau pastel */
+        font-family: 'Arial', sans-serif;
     }
     .stButton>button {
-        background-color: #FF9800; /* Oranye cerah */
-        color: white;
+        background-color: #A2C2E8; /* Biru pastel */
+        color: black;
         padding: 10px 24px;
         border: none;
         border-radius: 12px;
         cursor: pointer;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-family: 'Arial', sans-serif;
     }
     .stButton>button:hover {
-        background-color: #FF5722; /* Oranye gelap */
+        background-color: #7DA0D0; /* Biru pastel gelap */
     }
     .stNumberInput, .stSelectbox {
         margin-bottom: 20px;
