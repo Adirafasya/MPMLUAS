@@ -129,6 +129,6 @@ if st.button('Predict'):
         prediction = model.predict(user_input_processed)
         # Pemetaan hasil model ke "Pelanggan terdaftar" atau "Pelanggan tidak terdaftar"
         result = 'Pelanggan terdaftar' if prediction[0] == 1 else 'Pelanggan tidak terdaftar'
-        st.markdown(f"<h3 class='prediction-output'>Prediction: {result}</h3>", unsafe_allow_html=True)
+        st.markdown(f"<h3> {result}</h3>", unsafe_allow_html=True)
     except ValueError as e:
         st.error(f"Error in prediction: {e}")
