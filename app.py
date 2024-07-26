@@ -74,13 +74,17 @@ st.markdown("""
         background-color: #001a33; /* Darker Blue */
     }
     .stNumberInput, .stSelectbox {
-        margin-bottom: 20px;
+        margin-bottom: 10px; /* Mengurangi jarak antar elemen */
     }
     .css-1offfwp {
-        padding: 2rem;
+        padding: 10px; /* Mengurangi padding dalam kolom */
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         background-color: white;
+    }
+    .stSelectbox, .stNumberInput {
+        padding: 6px 12px; /* Mengurangi padding di dalam input box */
+        font-size: 14px; /* Ukuran teks lebih besar */
     }
     </style>
 """, unsafe_allow_html=True)
