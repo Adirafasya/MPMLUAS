@@ -79,6 +79,10 @@ st.markdown("""
         font-size: 18px; /* Ukuran teks lebih besar */
         text-align: center; /* Memusatkan teks */
     }
+    .info-text {
+        color: #003366; /* Dark Blue */
+        text-align: center; /* Memusatkan teks */
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -132,5 +136,5 @@ if st.button('Predict'):
 # Tambahkan elemen HTML untuk output
 st.markdown("""
     <h3 style='text-align: center;'>Output Prediksi</h3>
-    <p style='text-align: center;'>Hasil prediksi akan ditampilkan di sini.</p>
+    <p class='info-text'>Hasil prediksi akan ditampilkan di sini.</p>
 """, unsafe_allow_html=True)
