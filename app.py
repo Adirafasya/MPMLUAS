@@ -43,36 +43,31 @@ def preprocess_input(user_input):
     processed_input[numeric_features] = scaler.transform(processed_input[numeric_features])
     return processed_input
 
-# CSS untuk gaya dengan warna baby pink dan teks biru
+# CSS untuk gaya dengan warna baby pink dan biru tua
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
     .main {
-        background-color: #FDF2F8; /* Baby Pink */
+        background-color: #FDE2E4; /* Baby Pink */
         font-family: 'Baloo 2', cursive;
     }
-    h1, h3, p, label {
+    h1, h3, label, .stSelectbox label, .stNumberInput label, .stTextInput label {
         color: #003366; /* Dark Blue */
+        font-family: 'Baloo 2', cursive;
     }
     .stButton>button {
-        background-color: #003366; /* Dark Blue */
-        color: white;
+        background-color: #FFC1CC; /* Light Pink */
+        color: #003366; /* Dark Blue */
         padding: 10px 24px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        font-family: 'Baloo 2', cursive;
     }
     .stButton>button:hover {
-        background-color: #001a33; /* Darker Blue */
+        background-color: #FFA6C9; /* Darker Pink */
     }
     .stNumberInput, .stSelectbox {
-        margin-bottom: 10px; /* Mengurangi jarak antar elemen */
-    }
-    .css-1offfwp {
-        padding: 10px; /* Mengurangi padding dalam kolom */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        background-color: white;
+        margin-bottom: 20px;
     }
     .stSelectbox, .stNumberInput {
         padding: 6px 12px; /* Mengurangi padding di dalam input box */
@@ -84,9 +79,7 @@ st.markdown("""
 # Antarmuka Streamlit
 st.title("Prediksi Feedback Pelanggan Online Food")
 
-st.markdown("""
-    <h3>Masukkan Data Pelanggan</h3>
-""", unsafe_allow_html=True)
+st.markdown("<h3>Masukkan Data Pelanggan</h3>", unsafe_allow_html=True)
 
 # Input pengguna
 age = st.number_input('Age', min_value=18, max_value=100)
