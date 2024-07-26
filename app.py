@@ -103,7 +103,7 @@ col1, col2 = st.columns(2)
 
 # Input pengguna di kolom kiri
 with col1:
-    age = st.number_input('Age', min_value=18, max_value=100)
+    age = st.number_input('Umur', min_value=18, max_value=100)
     gender = st.selectbox('Gender', ['Male', 'Female'])
     marital_status = st.selectbox('Marital Status', ['Single', 'Married'])
     occupation = st.selectbox('Occupation', ['Student', 'Employee', 'Self Employed'])
