@@ -132,8 +132,3 @@ if st.button('Predict'):
         st.markdown(f"<h3 class='prediction-output'>Prediction: {result}</h3>", unsafe_allow_html=True)
     except ValueError as e:
         st.error(f"Error in prediction: {e}")
-
-# Menghapus bagian "Output Prediksi" dan menampilkan pesan dengan warna biru
-st.markdown("""
-    <p class='info-text'>Hasil prediksi akan ditampilkan di sini.</p>
-""", unsafe_allow_html=True)
